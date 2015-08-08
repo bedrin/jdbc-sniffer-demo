@@ -260,6 +260,13 @@
 			<artifactId>datatables-export-itext</artifactId>
 			<version>${dandelion.version}</version>
 		</dependency>
+
+		<!-- JDBC Sniffer -->
+		<dependency>
+		    <groupId>com.github.bedrin</groupId>
+		    <artifactId>jdbc-sniffer</artifactId>
+		    <version>2.3.3</version>
+		</dependency>
 	</dependencies>
 
 	<!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
