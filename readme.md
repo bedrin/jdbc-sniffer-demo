@@ -5,7 +5,7 @@ Sample application with JDBC Sniffer integration based on [Spring PetClinic](htt
 JDBC Sniffer records the queries executed by your Java application and shows them right in your browser.
 It allows you to early identify the performance ssues related to the database. Ideal for testing environment.
 
-See more at [https://github.com/bedrin/jdbc-sniffer](https://github.com/bedrin/jdbc-sniffer)
+See more at [https://github.com/sniffy/sniffy](https://github.com/sniffy/sniffy)
 
 ## Demo
 
