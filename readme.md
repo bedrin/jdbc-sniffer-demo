@@ -15,7 +15,7 @@ Live Demo - [http://demo.sniffy.io/](http://demo.sniffy.io/owners.html?lastName=
 
 ## Running petclinic locally
 ```
-git clone https://github.com/sniffy/jdbc-sniffer-demo.git
+git clone https://github.com/sniffy/sniffy-demo.git
 mvn package
 java -jar target/dependency/webapp-runner.jar target/*.war
 ```
