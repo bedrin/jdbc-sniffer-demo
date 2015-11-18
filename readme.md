@@ -9,13 +9,13 @@ See more at [https://github.com/bedrin/jdbc-sniffer](https://github.com/bedrin/j
 
 ## Demo
 
-Live Demo - [http://jdbcsniffer.herokuapp.com/](http://jdbcsniffer.herokuapp.com/owners.html?lastName=)
+Live Demo - [http://demo.sniffy.io/](http://demo.sniffy.io/owners.html?lastName=)
 
 ![RecordedDemo](https://bedrin.github.io/jdbc-sniffer/jdbcsniffer.gif)
 
 ## Running petclinic locally
 ```
-git clone https://github.com/bedrin/jdbc-sniffer-demo.git
+git clone https://github.com/sniffy/jdbc-sniffer-demo.git
 mvn package
 java -jar target/dependency/webapp-runner.jar target/*.war
 ```
