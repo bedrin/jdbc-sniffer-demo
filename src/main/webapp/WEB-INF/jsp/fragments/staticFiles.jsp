@@ -6,7 +6,7 @@ PetClinic :: a Spring Framework demonstration
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>PetClinic :: a JDBC Sniffer demonstration</title>
+    <title>Sniffy demo based on Spring Pet Clinic</title>
 
 
     <spring:url value="/webjars/bootstrap/2.3.0/css/bootstrap.min.css" var="bootstrapCss"/>
