@@ -28,6 +28,10 @@ PetClinic :: a Spring Framework demonstration
     <!-- jquery-ui.css file is not that big so we can afford to load it -->
     <spring:url value="/webjars/jquery-ui/1.10.3/themes/base/jquery-ui.css" var="jQueryUiCss"/>
     <link href="${jQueryUiCss}" rel="stylesheet"></link>
+
+    <!--[if lte IE 8]>
+    <script src="/webjars/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+    <![endif]-->
 </head>
 
 

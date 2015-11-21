@@ -39,7 +39,7 @@
     <!-- JDBC Sniffer -->
     <filter>
         <filter-name>sniffer</filter-name>
-        <filter-class>com.github.bedrin.jdbc.sniffer.servlet.SnifferFilter</filter-class>
+        <filter-class>io.sniffy.servlet.SnifferFilter</filter-class>
         <init-param>
             <param-name>inject-html</param-name>
             <param-value>true</param-value>
