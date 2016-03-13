@@ -11,7 +11,7 @@ See more at [https://github.com/sniffy/sniffy](https://github.com/sniffy/sniffy)
 
 Live Demo - [http://demo.sniffy.io/](http://demo.sniffy.io/owners.html?lastName=)
 
-![RecordedDemo](https://bedrin.github.io/jdbc-sniffer/jdbcsniffer.gif)
+![RecordedDemo](http://sniffy.io/demo.gif)
 
 ## Running petclinic locally
 ```
