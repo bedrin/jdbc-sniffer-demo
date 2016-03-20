@@ -429,5 +429,13 @@
 		</plugins>
 	</reporting>
 
+
+<repositories>
+    <repository>
+      <id>oss-sonatype</id>
+      <url>https://oss.sonatype.org/content/repositories/releases</url>
+    </repository>
+  </repositories>
+
 	<url>demopetclinic</url>
 </project>
