@@ -21,7 +21,7 @@
 
 
 		<!-- Java EE / Java SE dependencies -->
-		<tomcat.version>7.0.59</tomcat.version>
+		<tomcat.version>7.0.67</tomcat.version>
 
 		<!-- Test -->
 		<assertj.version>2.1.0</assertj.version>
@@ -273,11 +273,20 @@
 	<version>1.1.1</version>
 </dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>7.0.69</version>
+			<scope>provided</scope>
+		</dependency>
+
+
 		<!-- JDBC Sniffer -->
 		<dependency>
 		    <groupId>io.sniffy</groupId>
 		    <artifactId>sniffy</artifactId>
-		    <version>3.1.0-SNAPSHOT</version>
+			<version>3.1.0-RC9-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
@@ -370,6 +379,7 @@
 					<server>tomcat-development-server</server>
 					<port>9966</port>
 					<path>/petclinic</path>
+					<contextFile>${project.basedir}/src/main/webapp/WEB-INF/context.xml</contextFile>
 				</configuration>
 			</plugin>
 			 <plugin>
@@ -410,6 +420,126 @@
             </executions>
         </plugin>
 		</plugins>
+
+
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.tomcat.embed</groupId>
+							<artifactId>tomcat-embed-core</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-util</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-coyote</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-api</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-jdbc</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-dbcp</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-servlet-api</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-jsp-api</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-jasper</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-jasper-el</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-el-api</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-catalina</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-tribes</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-catalina-ha</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-annotations-api</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat</groupId>
+							<artifactId>tomcat-juli</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.tomcat.embed</groupId>
+							<artifactId>tomcat-embed-logging-juli</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.tomcat.embed</groupId>
+							<artifactId>tomcat-embed-logging-log4j</artifactId>
+							<version>${tomcat.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+
+
 	</build>
 		<reporting>
 		<plugins>
@@ -435,7 +565,21 @@
       <id>oss-sonatype</id>
       <url>https://oss.sonatype.org/content/repositories/releases</url>
     </repository>
+	<repository>
+		<id>oss-sonatype-snapshots</id>
+		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		<snapshots>true</snapshots>
+		<releases>false</releases>
+	</repository>
+
   </repositories>
 
 	<url>demopetclinic</url>
+
+
+
+
+
+
+
 </project>
