@@ -568,8 +568,13 @@
 	<repository>
 		<id>oss-sonatype-snapshots</id>
 		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		<snapshots>true</snapshots>
-		<releases>false</releases>
+		<snapshots>
+			<enabled>true</enabled>
+			<updatePolicy>always</updatePolicy>
+		</snapshots>
+		<releases>
+			<enabled>false</enabled>
+		</releases>
 	</repository>
 
   </repositories>
