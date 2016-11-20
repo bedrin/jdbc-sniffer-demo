@@ -44,6 +44,10 @@
             <param-name>inject-html</param-name>
             <param-value>true</param-value>
         </init-param>
+        <init-param>
+            <param-name>fault-tolerance-current-request</param-name>
+            <param-value>true</param-value>
+        </init-param>
     </filter>
     <filter-mapping>
         <filter-name>sniffer</filter-name>
