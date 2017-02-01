@@ -38,8 +38,8 @@
 
     <!-- JDBC Sniffer -->
     <filter>
-        <filter-name>sniffer</filter-name>
-        <filter-class>io.sniffy.servlet.SnifferFilter</filter-class>
+        <filter-name>sniffy</filter-name>
+        <filter-class>io.sniffy.servlet.SniffyFilter</filter-class>
         <init-param>
             <param-name>inject-html</param-name>
             <param-value>true</param-value>
@@ -50,7 +50,7 @@
         </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>sniffer</filter-name>
+        <filter-name>sniffy</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
