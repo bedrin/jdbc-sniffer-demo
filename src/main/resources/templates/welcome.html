@@ -8,6 +8,14 @@
     <div class="row">
         <div class="col-md-12">
           <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pets.png}"/>
+
+            <div class="wikipedia">
+                [(${article})]
+            </div>
+            <script>
+                $("div.wikipedia").html($("div.wikipedia table")[0].outerHTML);
+                $("div.wikipedia").css('display','block');
+            </script>
         </div>
     </div>
 
