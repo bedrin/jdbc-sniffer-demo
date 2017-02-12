@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/petclinic.war
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/spring-petclinic-1.5.1.jar
