@@ -37,7 +37,7 @@
       <dependency>
           <groupId>io.sniffy</groupId>
           <artifactId>sniffy</artifactId>
-          <version>3.1.0-RC11-SNAPSHOT</version>
+          <version>3.1.0-RC12-SNAPSHOT</version>
       </dependency>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
@@ -76,7 +76,6 @@
     <dependency>
       <groupId>org.hsqldb</groupId>
       <artifactId>hsqldb</artifactId>
-      <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>mysql</groupId>

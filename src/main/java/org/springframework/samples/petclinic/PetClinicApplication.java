@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic;
 
 import io.sniffy.boot.EnableSniffy;
 import io.sniffy.registry.ConnectionsRegistry;
+import org.hsqldb.Server;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -32,6 +33,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PetClinicApplication {
 
     public static void main(String[] args) throws Exception {
+        if (System.getProperty("db.started") == null) {
+            Server.main("--address 127.0.0.1 --port 8967 --database.0 mem:xdb --dbname.0 xdb".split(" "));
+            System.setProperty("db.started", "true");
+        }
         ConnectionsRegistry.INSTANCE.setThreadLocal(true); // For demo purposes only
         SpringApplication.run(PetClinicApplication.class, args);
     }
