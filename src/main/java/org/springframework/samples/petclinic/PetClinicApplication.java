@@ -32,12 +32,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableSniffy
 public class PetClinicApplication {
 
-    public static void main(String[] args) throws Exception {
+    static {
         if (System.getProperty("db.started") == null) {
             Server.main("--address 127.0.0.1 --port 8967 --database.0 mem:xdb --dbname.0 xdb".split(" "));
             System.setProperty("db.started", "true");
         }
         ConnectionsRegistry.INSTANCE.setThreadLocal(true); // For demo purposes only
+    }
+
+    public static void main(String[] args) throws Exception {
         SpringApplication.run(PetClinicApplication.class, args);
     }
 
