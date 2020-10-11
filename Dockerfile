@@ -1,5 +1,7 @@
 FROM openjdk:8
 
+RUN apt-get update && apt-get -y install maven
+
 ADD ./* /tmp/source/
 
 RUN cd /tmp/source && \
