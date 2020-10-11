@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-ADD ./* /tmp/source
+ADD ./* /tmp/source/
 
 RUN cd /tmp/source && \
     mvn clean install && \
